@@ -14,12 +14,12 @@ pipeline {
         }
         stage('MAVEN CLEAN') {
             steps {
-                mvn clean install
+               sh 'mvn clean install'
             }
         }
         stage('MAVEN COMPILE') {
             steps {
-                sh 'mvn compile';
+                sh 'mvn compile'
             }
         }
         stage('MAVEN SONARQUBE') {
